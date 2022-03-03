@@ -242,7 +242,7 @@ CREATE TABLE `uzytkownicy` (
 
 INSERT INTO `uzytkownicy` (`idUzytkownik`, `login`, `nazwa`, `uprawnienia`, `data_rejestracji`, `plec`, `miejscowosc`) VALUES
 (1, 'admin@portal.com', 'admin', 1, '2022-01-26 19:43:00', 0, 'Portal'),
-(4, 'anna123@gmail.com', '', 0, '2022-03-03 09:30:56', 1, 'miasto'),
+(4, 'anna123@gmail.com', 'anna123', 0, '2022-03-03 09:30:56', 1, 'miasto'),
 (9, 'man@man', 'man', 0, '2022-01-28 20:00:31', 0, 'man'),
 (10, 'woman@woman', 'woman', 0, '2022-01-28 20:01:22', 0, 'woman'),
 (11, 'anna2@dot.com', 'anna2', 0, '2022-01-28 20:03:24', 1, 'anna2');
