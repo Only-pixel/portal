@@ -28,4 +28,3 @@ BEGIN
     RETURN Length;
 END //
 DELIMITER ;
-select DlugoscBlokady(1) from zablokowani;
