@@ -7,10 +7,6 @@ BEGIN
 END //
 DELIMITER ;
 
-call NowyUzytkownik('ala@ma.kota','Ala','12345',1,'Torun');
-call NowyUzytkownik('arek@wp.pl','Arek','areczek125',0,'Poznan');
-call NowyUzytkownik('asia@wp.pl','Asia','haslo12$',1,'Warszawa');
-
 DELIMITER //
 CREATE or REPLACE PROCEDURE NowyPost(pTytul varchar(200), pTresc text, pTemat int(11), pIdUzytkownika int(11))
 BEGIN
@@ -19,10 +15,6 @@ BEGIN
     INSERT INTO portal.trescpostow(`tresc`, `idPost`) VALUES (pTresc,@temp_id);
 END //
 DELIMITER ;
-
-CALL NowyPost('Moj pierwszy post!','"He has a turtle and she has a shell.
-
-She’s the principal and he’s the janitor..."', 5,3);
 
 
 DELIMITER //
