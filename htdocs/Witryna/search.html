@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>Wyniki wyszukiwania dla frazy </title>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap4.min.js"></script>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/search.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="">Blog</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="">Strona główna <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Wiadomości</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="">Panel użytkownika</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="">Wyloguj się</a>
+          </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Wpisz tytuł lub temat..." aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Szukaj</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+	<div class='heading'><h1>Wyniki wyszukiwania dla: ""</h1></div>
+      <div class="jumbotron">
+        <h2>Przykładowy nagłówek</h2>
+        <p class="lead">To jest przykładowa treść artykułu, wyświetlana na stronie głównej. Nie wiadomo jednak, czy zawartość ta nie zostanie ukryta w wersji produkcyjnej, pozostawiając jedynie nagłówek.</p>
+		<div class="sidetext">15 komentarzy &bull; 25.02.2022 14:36</div>
+        <a class="btn btn-lg btn-primary" href="" role="button">Komentarze »</a>
+      </div>
+	  <div class="jumbotron">
+        <h2>Nagłówek 2</h2>
+        <p class="lead">Inna zawartość posta.</p>
+		<div class="sidetext">5 komentarzy &bull; 25.02.2022 12:12</div>
+        <a class="btn btn-lg btn-primary" href="" role="button">Komentarze »</a>
+      </div>
+    </main>
+</body>
+</html>

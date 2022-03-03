@@ -1,0 +1,46 @@
+
+body {
+  padding-top: 4.5rem;
+}
+
+.jumbotron {
+    padding: 1rem 1rem;
+	margin-bottom: 1rem;
+	overflow: auto;
+}
+.btn-lg, .btn-group-lg > .btn {
+    padding: 0.3rem 0.7rem;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+}
+
+.tinput{
+	max-width:50rem;
+}
+.t2input{
+	max-width:30rem;
+}
+
+.submit-btn{
+	margin: 0 auto;
+	text-align:center;
+	clear:both;
+}
+.btn-primary{
+	padding:0.5rem 2rem;
+}
+
+.form-group{
+	margin-left:1rem;
+	margin-right:1rem;
+}
+
+.smx{
+	float:left;
+	max-width:30rem;
+}
+
+.fileAdd{
+	float:left;
+}

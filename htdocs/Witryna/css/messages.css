@@ -1,0 +1,60 @@
+
+body {
+  padding-top: 4.5rem;
+}
+
+.container{
+	max-width:75rem;
+	margin-bottom:4.5rem;
+}
+
+.other {
+    padding: 0.7rem 0.7rem;
+	margin-bottom: 1rem;
+	max-width:50rem;
+	margin-right:32%;
+}
+
+.self {
+    padding: 0.7rem 0.7rem;
+	margin-bottom: 1rem;
+	max-width:50rem;
+	margin-left:32%;
+}
+
+.lead {
+    font-size: 1rem;
+    font-weight: 300;
+	float:none;
+	margin-left:0.2rem;
+}
+
+.sidetext{
+	float:none;
+	padding:0.4rem 0.5rem;
+	font-size: 0.80rem;
+}
+
+.username{
+	float:none;
+}
+
+.send-btn{
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+.form-send{
+	margin: 0 auto;
+	flex-flow:nowrap;
+}
+
+.text-input{
+	margin-right:0.5rem;
+}
+
+@media (min-width: 850px){
+.text-scale{
+	width:40rem !important;
+}
+}

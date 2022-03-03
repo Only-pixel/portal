@@ -1,0 +1,39 @@
+DELIMITER //
+CREATE or REPLACE PROCEDURE NowyUzytkownik(plogin varchar(30), pnazwa varchar(30), phaslo char(64), pplec int, pmiejscowosc varchar(60))
+BEGIN
+    SELECT @temp_id := COALESCE(MAX(idUzytkownik),0)+1 FROM uzytkownicy;
+	INSERT into portal.uzytkownicy(`idUzytkownik`,`login`, `nazwa`, `uprawnienia`, `plec`, `miejscowosc`) VALUES (@temp_id,plogin,pnazwa,0,pplec,pmiejscowosc);
+    INSERT INTO portal.hasla(`Haslo`, `czy_aktywne`, `idUzytkownik`) VALUES (phaslo,1,@temp_id);
+END //
+DELIMITER ;
+
+call NowyUzytkownik('ala@ma.kota','Ala','12345',1,'Torun');
+call NowyUzytkownik('arek@wp.pl','Arek','areczek125',0,'Poznan');
+call NowyUzytkownik('asia@wp.pl','Asia','haslo12$',1,'Warszawa');
+
+DELIMITER //
+CREATE or REPLACE PROCEDURE NowyPost(pTytul varchar(200), pTresc text, pTemat int(11), pIdUzytkownika int(11))
+BEGIN
+	SELECT @temp_id := COALESCE(MAX(idPost),0)+1 FROM portal.posty;
+	INSERT INTO portal.posty(`idPost`,`tytul`,`idUzytkownik`,`idTemat`) VALUES (@temp_id,pTytul,pIdUzytkownika,pTemat);
+    INSERT INTO portal.trescpostow(`tresc`, `idPost`) VALUES (pTresc,@temp_id);
+END //
+DELIMITER ;
+
+CALL NowyPost('Moj pierwszy post!','"He has a turtle and she has a shell.
+
+She’s the principal and he’s the janitor..."', 5,3);
+
+
+DELIMITER //
+CREATE or REPLACE FUNCTION DlugoscBlokady(pIdUzytkownika int(11))
+RETURNS INT
+BEGIN
+    DECLARE Length INT;
+    SET Length = 0;
+    SELECT (date(date(ifnull(data_blokady,0))+ifnull(czas_blokady,0)) - CURRENT_DATE) into Length from portal.zablokowani where idUzytkownik = pIdUzytkownika;
+ SELECT IF(Length<=0, 0, Length) into Length;   
+    RETURN Length;
+END //
+DELIMITER ;
+select DlugoscBlokady(1) from zablokowani;

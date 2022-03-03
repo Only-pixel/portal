@@ -1,0 +1,51 @@
+
+body {
+  padding-top: 4.5rem;
+}
+
+.jumbotron {
+    padding: 1rem 1rem;
+	margin-bottom: 1rem;
+}
+.lead {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+.btn-lg, .btn-group-lg > .btn {
+    padding: 0.3rem 0.7rem;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+	float:clear;
+	background-color:#8E24AA;
+}
+
+.btn-lg:hover{
+	background-color:#4A148C;
+	text-decoration:none;
+}
+
+.sidetext{
+	float:right;
+	padding:0.6rem 0.7rem;
+	font-size: 0.90rem;
+}
+
+.newPost{
+	margin-bottom:2rem;
+	margin-top:1rem;
+	text-align:center;
+}
+
+.btn-np{
+	padding: 1rem 2rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+	background-color: #E91E63;
+}
+
+.btn-np:hover{
+	background-color: #C51162;
+	text-decoration:none;
+}
